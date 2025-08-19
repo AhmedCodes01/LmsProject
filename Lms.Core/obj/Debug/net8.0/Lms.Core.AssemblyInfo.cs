@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Lms.Core")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bf62a5b8d50a53205c9017e3805b2c7f932dfc0a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+96349f71a1a7b6d8dd25afade6e7270f5e0dc3a4")]
 [assembly: System.Reflection.AssemblyProductAttribute("Lms.Core")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Lms.Core")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
