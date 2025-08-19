@@ -1,0 +1,16 @@
+C:\Users\Mkuu         Ken\LmsProject\Lms.Data\bin\Debug\net8.0\Lms.Data.deps.json
+C:\Users\Mkuu         Ken\LmsProject\Lms.Data\bin\Debug\net8.0\Lms.Data.dll
+C:\Users\Mkuu         Ken\LmsProject\Lms.Data\bin\Debug\net8.0\Lms.Data.pdb
+C:\Users\Mkuu         Ken\LmsProject\Lms.Data\bin\Debug\net8.0\Lms.Core.dll
+C:\Users\Mkuu         Ken\LmsProject\Lms.Data\bin\Debug\net8.0\Lms.Core.pdb
+C:\Users\Mkuu         Ken\LmsProject\Lms.Data\obj\Debug\net8.0\Lms.Data.csproj.AssemblyReference.cache
+C:\Users\Mkuu         Ken\LmsProject\Lms.Data\obj\Debug\net8.0\Lms.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mkuu         Ken\LmsProject\Lms.Data\obj\Debug\net8.0\Lms.Data.AssemblyInfoInputs.cache
+C:\Users\Mkuu         Ken\LmsProject\Lms.Data\obj\Debug\net8.0\Lms.Data.AssemblyInfo.cs
+C:\Users\Mkuu         Ken\LmsProject\Lms.Data\obj\Debug\net8.0\Lms.Data.csproj.CoreCompileInputs.cache
+C:\Users\Mkuu         Ken\LmsProject\Lms.Data\obj\Debug\net8.0\Lms.Data.sourcelink.json
+C:\Users\Mkuu         Ken\LmsProject\Lms.Data\obj\Debug\net8.0\Lms.Data.csproj.Up2Date
+C:\Users\Mkuu         Ken\LmsProject\Lms.Data\obj\Debug\net8.0\Lms.Data.dll
+C:\Users\Mkuu         Ken\LmsProject\Lms.Data\obj\Debug\net8.0\refint\Lms.Data.dll
+C:\Users\Mkuu         Ken\LmsProject\Lms.Data\obj\Debug\net8.0\Lms.Data.pdb
+C:\Users\Mkuu         Ken\LmsProject\Lms.Data\obj\Debug\net8.0\ref\Lms.Data.dll
