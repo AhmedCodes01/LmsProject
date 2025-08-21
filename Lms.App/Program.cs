@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Lms.Core;
+using Lms.Data;
 
 namespace Lms.App
 {
@@ -16,6 +17,8 @@ namespace Lms.App
 
         static void Main(string[] args)
         {
+            DatabaseHelper.InitializeDatabase();
+
             bool exit = false;
 
             while (!exit)
@@ -228,4 +231,3 @@ namespace Lms.App
         }
     }
 }
-

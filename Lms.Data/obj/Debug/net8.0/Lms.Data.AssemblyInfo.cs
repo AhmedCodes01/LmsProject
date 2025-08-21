@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Lms.Data")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+44fa89748bbf1b590ab0fb59a6467ff9316fe5ab")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7cf315ad24b49acb04c90d7a5d51732a0f248aac")]
 [assembly: System.Reflection.AssemblyProductAttribute("Lms.Data")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Lms.Data")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

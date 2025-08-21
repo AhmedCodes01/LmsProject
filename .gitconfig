@@ -1,0 +1,19 @@
+[user]
+	name = AhmedCodes01
+	email = ahmedcodes01@gmail.com
+
+# Ignore build outputs
+bin/
+obj/
+
+# Visual Studio files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Logs
+*.log
+
+# Temporary files
+*.vs/
