@@ -11,8 +11,6 @@ namespace Lms.App
         static List<User> users = new List<User>();
         static List<Loan> loans = new List<Loan>();
 
-        static int nextBookId = 1;
-        static int nextUserId = 1;
         static int nextLoanId = 1;
 
         static void Main(string[] args)
@@ -72,16 +70,16 @@ namespace Lms.App
             Console.Clear();
             Console.WriteLine("=== Add a New Book ===");
             Console.Write("Title: ");
-            string title = Console.ReadLine();
+            string? title = Console.ReadLine();
             Console.Write("Author: ");
-            string author = Console.ReadLine();
+            string? author = Console.ReadLine();
             Console.Write("ISBN: ");
-            string isbn = Console.ReadLine();
+            string? isbn = Console.ReadLine();
             Console.Write("Year: ");
-            int year = int.Parse(Console.ReadLine());
+            int year = int.Parse(Console.ReadLine() ?? "0");
 
-            Book newBook = new Book(nextBookId++, title, author, isbn, year);
-            books.Add(newBook);
+            Book newBook = new Book(0, title ?? "", author ?? "", isbn ?? "", year);
+            DatabaseHelper.AddBook(newBook);
 
             Console.WriteLine("\nBook added successfully!");
             Pause();
@@ -92,13 +90,15 @@ namespace Lms.App
             Console.Clear();
             Console.WriteLine("=== List of Books ===");
 
-            if (books.Count == 0)
+            var allBooks = DatabaseHelper.GetAllBooks();
+
+            if (allBooks.Count == 0)
             {
                 Console.WriteLine("No books available.");
             }
             else
             {
-                foreach (var book in books)
+                foreach (var book in allBooks)
                 {
                     Console.WriteLine(book);
                 }
@@ -112,11 +112,9 @@ namespace Lms.App
             Console.Clear();
             Console.WriteLine("=== Search for a Book ===");
             Console.Write("Enter title or author: ");
-            string keyword = Console.ReadLine().ToLower();
+            string keyword = Console.ReadLine() ?? "";
 
-            var results = books.FindAll(b =>
-                b.Title.ToLower().Contains(keyword) ||
-                b.Author.ToLower().Contains(keyword));
+            var results = DatabaseHelper.SearchBooks(keyword);
 
             if (results.Count == 0)
             {
@@ -138,12 +136,12 @@ namespace Lms.App
             Console.Clear();
             Console.WriteLine("=== Register New User ===");
             Console.Write("Name: ");
-            string name = Console.ReadLine();
+            string name = Console.ReadLine() ?? "";
             Console.Write("Email: ");
-            string email = Console.ReadLine();
+            string email = Console.ReadLine() ?? "";
 
-            User newUser = new User(nextUserId++, name, email);
-            users.Add(newUser);
+            User newUser = new User(0, name, email);
+            DatabaseHelper.AddUser(newUser);
 
             Console.WriteLine("\nUser registered successfully!");
             Pause();
@@ -154,14 +152,17 @@ namespace Lms.App
             Console.Clear();
             Console.WriteLine("=== Borrow a Book ===");
 
-            if (users.Count == 0)
+            var allUsers = DatabaseHelper.GetAllUsers();
+            var allBooks = DatabaseHelper.GetAllBooks();
+
+            if (allUsers.Count == 0)
             {
                 Console.WriteLine("No users registered.");
                 Pause();
                 return;
             }
 
-            if (books.Count == 0)
+            if (allBooks.Count == 0)
             {
                 Console.WriteLine("No books available.");
                 Pause();
@@ -169,8 +170,8 @@ namespace Lms.App
             }
 
             Console.Write("Enter User ID: ");
-            int userId = int.Parse(Console.ReadLine());
-            var user = users.Find(u => u.Id == userId);
+            int userId = int.Parse(Console.ReadLine() ?? "0");
+            var user = allUsers.Find(u => u.Id == userId);
 
             if (user == null)
             {
@@ -180,8 +181,8 @@ namespace Lms.App
             }
 
             Console.Write("Enter Book ID: ");
-            int bookId = int.Parse(Console.ReadLine());
-            var book = books.Find(b => b.Id == bookId);
+            int bookId = int.Parse(Console.ReadLine() ?? "0");
+            var book = allBooks.Find(b => b.Id == bookId);
 
             if (book == null || !book.IsAvailable)
             {
@@ -207,7 +208,7 @@ namespace Lms.App
             Console.WriteLine("=== Return a Book ===");
 
             Console.Write("Enter Loan ID: ");
-            int loanId = int.Parse(Console.ReadLine());
+            int loanId = int.Parse(Console.ReadLine() ?? "0");
             var loan = loans.Find(l => l.Id == loanId);
 
             if (loan == null || loan.IsReturned())
@@ -231,3 +232,4 @@ namespace Lms.App
         }
     }
 }
+
