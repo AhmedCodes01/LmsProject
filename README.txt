@@ -1,7 +1,7 @@
-Library Management System (C# Console + SQLite)
+Library Management System (C# Console + SQL)
 
 Overview
-This is a simple Library Management System built using C# (.NET), with SQLite for data storage.
+This is a simple Library Management System built using C# (.NET), with SQL for data storage.
 It allows adding, searching, viewing, borrowing, and returning books, as well as registering users.
 
 Features
@@ -15,7 +15,7 @@ Features
 
 Technology Stack
 - C# (.NET 6/7)
-- SQLite (local database)
+- SQL(local database)
 - Console-based UI
 
 Project Structure
